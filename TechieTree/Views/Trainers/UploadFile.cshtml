@@ -1,0 +1,13 @@
+﻿
+@model TechieTree.Models.FileUploadModel
+@{
+    Layout = null;
+}
+@using (Html.BeginForm("UploadFile", "Trainers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <input name="fileupload1" type="file" value=" " />
+    <input name="sub" type="submit" value="Upload File " />
+
+}
+

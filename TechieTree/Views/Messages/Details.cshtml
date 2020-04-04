@@ -1,0 +1,82 @@
+﻿@model TechieTree.Models.Messages
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Messages</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SenderTraineeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenderTraineeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SenderTrainerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenderTrainerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecieverTraineeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecieverTraineeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecieverTrainerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecieverTrainerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SenderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecieverName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecieverName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MessageId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

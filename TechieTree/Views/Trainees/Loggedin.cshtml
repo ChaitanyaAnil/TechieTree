@@ -1,0 +1,49 @@
+﻿
+
+@{
+    ViewBag.Title = "Loggedin";
+
+}
+<h3>Trainee Module</h3>
+
+@if (Session["ID"] != null)
+{
+    <h3>Hello @Session["Email"].ToString()</h3>
+    <h2>
+        @Html.ActionLink("logout", "Logout", "Trainees");
+    </h2>
+}
+
+<div class="jumbotron">
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            @Html.ActionLink("Dashboard","Loggedin","Trainees")
+            @Html.ActionLink("Downloadfiles", "DownloadsFile")
+            @Html.ActionLink("DailyActivits", "ScheduleDetails")
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    TraineDetails
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                    @Html.ActionLink("ViewProfile", "Details", "Trainees")
+                    @Html.ActionLink("Edit profile", "Delete", "Trainees")
+
+
+                </div>
+            </div>
+            @Html.ActionLink("submitFeedback", "Create", "Feedbacks")
+            @Html.ActionLink("SubmitAttendence", "Create", "MyAttendence")
+            @Html.ActionLink("AllCources", "AllCourses", "Courses")
+            @Html.ActionLink("Messages","Create","Messages")
+            @Html.ActionLink("Booking","Booking","Booking")
+
+
+            @Html.ActionLink("About", "About")
+            @Html.ActionLink("Contactus", "Contact")
+            @Html.ActionLink("logout", "Logout", "Trainees");
+        </nav>
+    </div>
+</div>
